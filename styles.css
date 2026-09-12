@@ -76,6 +76,7 @@ a {
 
 /* ── Nav ── */
 nav {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   background: rgba(255, 255, 255, 0.95);
@@ -335,6 +336,12 @@ nav {
 
 .download-alt .download-sub {
   color: rgba(255, 255, 255, 0.5);
+}
+
+.privacy-content ul {
+  color: var(--gray);
+  line-height: 1.7;
+  padding-left: 24px;
 }
 
 /* ── Footer ── */
