@@ -154,6 +154,16 @@ nav {
   width: 36%;
 }
 
+.appstore-badge {
+  height: 54px;
+  width: auto;
+}
+
+.appstore-link {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
 /* ── Problem ── */
 .problem {
   background: var(--light-gray);
