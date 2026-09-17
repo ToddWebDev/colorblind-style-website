@@ -268,7 +268,7 @@ nav {
   font-size: 18px;
   color: var(--gray);
   margin-bottom: 32px;
-  max-width: 480px;
+  max-width: 525px;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
@@ -277,6 +277,19 @@ nav {
   margin-top: 16px;
   font-size: 14px;
   color: var(--gray);
+}
+
+.download-alt {
+  background: var(--black);
+  color: var(--white);
+}
+
+.download-alt p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.download-alt .download-sub {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 /* ── Feature Spotlight ── */
@@ -323,19 +336,6 @@ nav {
   width: 240px;
   border-radius: var(--radius);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
-}
-
-.download-alt {
-  background: var(--black);
-  color: var(--white);
-}
-
-.download-alt p {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.download-alt .download-sub {
-  color: rgba(255, 255, 255, 0.5);
 }
 
 .privacy-content ul {
