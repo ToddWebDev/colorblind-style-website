@@ -28,9 +28,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap"
-      rel="stylesheet"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap"
+      />
+    </noscript>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -49,287 +57,402 @@
         >
       </div>
     </nav>
-
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-text">
-        <h1>Dress confidently,<br />every day.</h1>
-        <p class="hero-sub">
-          Colorblind Style uses your smartphone camera to identify colors and
-          tell you if your outfit works — built for color vision deficiency.
-        </p>
-        <a
-          href="https://apps.apple.com/us/app/colorblind-style/id6797023300"
-          target="_blank"
-          class="btn btn-primary"
-          >Download on the App Store</a
-        >
-      </div>
-      <div class="hero-screenshots">
-        <img
-          src="assets/screenshots/screen1.jpg"
-          alt="Camera screen"
-          class="screenshot screenshot-left"
-        />
-        <img
-          src="assets/screenshots/screen4.jpg"
-          alt="Color identified"
-          class="screenshot screenshot-center"
-        />
-        <img
-          src="assets/screenshots/screen3.jpg"
-          alt="Style verdict"
-          class="screenshot screenshot-right"
-        />
-      </div>
-    </section>
-
-    <!-- PROBLEM -->
-    <section class="problem">
-      <div class="container">
-        <h2>Getting dressed shouldn't be stressful</h2>
-        <p>
-          For the millions of people living with color vision deficiency,
-          matching clothes is a daily challenge. Colorblind Style gives you a
-          personal style advisor in your pocket — one that actually understands
-          color so you don't have to.
-        </p>
-      </div>
-    </section>
-
-    <!-- FEATURES -->
-    <section class="features">
-      <div class="container">
-        <h2>What you get</h2>
-        <div class="features-grid">
-          <div class="feature">
-            <div class="feature-icon">🎯</div>
-            <h3>Point and identify</h3>
-            <p>
-              Aim your camera at any clothing item and get an instant, specific
-              color name. Not just "green" — olive, sage, forest, or teal.
-            </p>
-          </div>
-          <div class="feature">
-            <div class="feature-icon">👑</div>
-            <h3>Style verdict</h3>
-            <p>
-              Scan two items and find out how well they work together. Every
-              match comes with a style category, occasion guide, and styling
-              tips.
-            </p>
-          </div>
-          <div class="feature">
-            <div class="feature-icon">✨</div>
-            <h3>Better alternatives</h3>
-            <p>
-              When colors clash, Colorblind Style suggests what would work
-              better instead.
-            </p>
-          </div>
-          <div class="feature">
-            <div class="feature-icon">🔖</div>
-            <h3>Save your matches</h3>
-            <p>
-              Build a personal library of outfit combinations that work for you.
-            </p>
-          </div>
-          <div class="feature">
-            <div class="feature-icon">🔬</div>
-            <h3>Undertone reveal</h3>
-            <p>
-              When a color reads as gray, see exactly where it falls on the
-              color spectrum and what hue it's leaning toward.
-            </p>
-          </div>
-          <div class="feature">
-            <div class="feature-icon">🔒</div>
-            <h3>Privacy first</h3>
-            <p>
-              No account required. No data collected. Your camera stays on your
-              device — always.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SCREENSHOTS -->
-    <section class="screenshots-section">
-      <div class="container">
-        <h2>See it in action</h2>
-      </div>
-      <div class="screenshots-row" tabindex="0">
-        <img
-          src="assets/screenshots/screen1.jpg"
-          alt="Camera targeting clothing"
-          class="screenshot-thumb"
-        />
-        <img
-          src="assets/screenshots/screen2.jpg"
-          alt="Color identified"
-          class="screenshot-thumb"
-        />
-        <img
-          src="assets/screenshots/screen3.jpg"
-          alt="Style verdict"
-          class="screenshot-thumb"
-        />
-        <img
-          src="assets/screenshots/screen4.jpg"
-          alt="Style details"
-          class="screenshot-thumb"
-        />
-        <img
-          src="assets/screenshots/screen5.jpg"
-          alt="Saved matches"
-          class="screenshot-thumb"
-        />
-      </div>
-    </section>
-
-    <!-- DOWNLOAD -->
-    <section class="download" id="download">
-      <div class="container">
-        <h2>Try it free</h2>
-        <p>
-          Three free color matches on us. Unlock unlimited matches and saves
-          forever with a single one-time purchase of $4.99.
-        </p>
-        <a
-          href="https://apps.apple.com/us/app/colorblind-style/id6797023300"
-          target="_blank"
-          class="appstore-link"
-        >
-          <img
-            src="assets/appstore-black.svg"
-            alt="Download on the App Store"
-            class="appstore-badge"
+    <main>
+      <!-- BANNER -->
+      <div class="banner">
+        <picture>
+          <source
+            media="(max-width: 767px)"
+            srcset="/assets/banner-v3-mobile.webp"
+            width="1546"
+            height="1546"
+            type="image/webp"
           />
-        </a>
-        <p class="download-sub">
-          Free to download · iPhone and iPad · No account required
-        </p>
+          <source
+            media="(max-width: 1199px)"
+            srcset="/assets/banner-v3-full.webp"
+            width="2946"
+            height="1546"
+            type="image/webp"
+          />
+          <source
+            srcset="/assets/banner-v3-wide.webp"
+            width="2946"
+            height="1228"
+            type="image/webp"
+          />
+          <img
+            src="/assets/banner-v3-wide.jpg"
+            width="2946"
+            height="1228"
+            alt=""
+            style="width: 100%; height: auto; display: block"
+            fetchpriority="high"
+          />
+        </picture>
       </div>
-    </section>
 
-    <!-- STYLE VERDICTS -->
-    <section class="feature-spotlight">
-      <div class="container feature-spotlight-inner">
-        <div class="feature-spotlight-text">
-          <h2>Your outfit, analyzed.</h2>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Dress confidently,<br />every day.</h1>
+          <p class="hero-sub">
+            Colorblind Style uses your smartphone camera to identify colors and
+            tell you if your outfit works — built for color vision deficiency.
+          </p>
+          <a
+            href="https://apps.apple.com/us/app/colorblind-style/id6797023300"
+            target="_blank"
+            class="btn btn-primary"
+            >Download on the App Store</a
+          >
+        </div>
+        <div class="hero-screenshots">
+          <picture class="img-picture screenshot screenshot-left">
+            <source srcset="assets/screenshots/screen1.webp" type="image/webp" />
+            <img
+              src="assets/screenshots/screen1.jpg"
+              alt="Camera screen"
+              width="1242"
+              height="2688"
+            />
+          </picture>
+          <picture class="img-picture screenshot screenshot-center">
+            <source srcset="assets/screenshots/screen4.webp" type="image/webp" />
+            <img
+              src="assets/screenshots/screen4.jpg"
+              alt="Color identified"
+              width="1242"
+              height="2688"
+            />
+          </picture>
+          <picture class="img-picture screenshot screenshot-right">
+            <source srcset="assets/screenshots/screen3.webp" type="image/webp" />
+            <img
+              src="assets/screenshots/screen3.jpg"
+              alt="Style verdict"
+              width="1242"
+              height="2688"
+            />
+          </picture>
+        </div>
+      </section>
+
+      <!-- PROBLEM -->
+      <section class="problem">
+        <div class="container">
+          <h2>Getting dressed shouldn't be stressful</h2>
           <p>
-            Every color combination gets a full style verdict — Classic, Bold,
-            Harmonious, or Playful. See which occasions it works for, what
-            seasons it suits, and exactly how to wear it with confidence.
+            For the millions of people living with color vision deficiency,
+            matching clothes is a daily challenge. Colorblind Style gives you a
+            personal style advisor in your pocket — one that actually
+            understands color so you don't have to.
           </p>
         </div>
-        <div class="feature-spotlight-image">
-          <img
-            src="assets/screenshots/verdict1.jpg"
-            alt="Classic style verdict"
-            class="spotlight-screenshot"
-          />
-          <img
-            src="assets/screenshots/verdict2.jpg"
-            alt="Style details"
-            class="spotlight-screenshot"
-          />
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- CLASHING -->
-    <section class="feature-spotlight feature-spotlight-alt">
-      <div class="container feature-spotlight-inner">
-        <div class="feature-spotlight-image">
-          <img
-            src="assets/screenshots/clashing.jpg"
-            alt="Clashing verdict screen"
-            class="spotlight-screenshot"
-          />
+      <!-- FEATURES -->
+      <section class="features">
+        <div class="container">
+          <h2>What you get</h2>
+          <div class="features-grid">
+            <div class="feature">
+              <div class="feature-icon">🎯</div>
+              <h3>Point and identify</h3>
+              <p>
+                Aim your camera at any clothing item and get an instant,
+                specific color name. Not just "green" — olive, sage, forest, or
+                teal.
+              </p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">👑</div>
+              <h3>Style verdict</h3>
+              <p>
+                Scan two items and find out how well they work together. Every
+                match comes with a style category, occasion guide, and styling
+                tips.
+              </p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">✨</div>
+              <h3>Better alternatives</h3>
+              <p>
+                When colors clash, Colorblind Style suggests what would work
+                better instead.
+              </p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">🔖</div>
+              <h3>Save your matches</h3>
+              <p>
+                Build a personal library of outfit combinations that work for
+                you.
+              </p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">🔬</div>
+              <h3>Undertone reveal</h3>
+              <p>
+                When a color reads as gray, see exactly where it falls on the
+                color spectrum and what hue it's leaning toward.
+              </p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">🔒</div>
+              <h3>Privacy first</h3>
+              <p>
+                No account required. No data collected. Your camera stays on
+                your device — always.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="feature-spotlight-text">
-          <h2>Know what to avoid</h2>
+      </section>
+
+      <!-- SCREENSHOTS -->
+      <section class="screenshots-section">
+        <div class="container">
+          <h2>See it in action</h2>
+        </div>
+        <div class="screenshots-row" tabindex="0">
+          <picture class="img-picture screenshot-thumb">
+            <source srcset="assets/screenshots/screen1.webp" type="image/webp" />
+            <img
+              src="assets/screenshots/screen1.jpg"
+              alt="Camera targeting clothing"
+              width="1242"
+              height="2688"
+            />
+          </picture>
+          <picture class="img-picture screenshot-thumb">
+            <source srcset="assets/screenshots/screen2.webp" type="image/webp" />
+            <img
+              src="assets/screenshots/screen2.jpg"
+              alt="Color identified"
+              width="1242"
+              height="2688"
+            />
+          </picture>
+          <picture class="img-picture screenshot-thumb">
+            <source srcset="assets/screenshots/screen3.webp" type="image/webp" />
+            <img
+              src="assets/screenshots/screen3.jpg"
+              alt="Style verdict"
+              width="1242"
+              height="2688"
+            />
+          </picture>
+          <picture class="img-picture screenshot-thumb">
+            <source srcset="assets/screenshots/screen4.webp" type="image/webp" />
+            <img
+              src="assets/screenshots/screen4.jpg"
+              alt="Style details"
+              width="1242"
+              height="2688"
+            />
+          </picture>
+          <picture class="img-picture screenshot-thumb">
+            <source srcset="assets/screenshots/screen5.webp" type="image/webp" />
+            <img
+              src="assets/screenshots/screen5.jpg"
+              alt="Saved matches"
+              width="1242"
+              height="2688"
+            />
+          </picture>
+        </div>
+      </section>
+
+      <!-- DOWNLOAD -->
+      <section class="download" id="download">
+        <div class="container">
+          <h2>Try it free</h2>
           <p>
-            When colors clash, Colorblind Style doesn't just tell you — it shows
-            you what would work better instead. Three alternative colors that
-            pair well with what you already have.
+            Three free color matches on us. Unlock unlimited matches and saves
+            forever with a single one-time purchase of $4.99.
+          </p>
+          <a
+            href="https://apps.apple.com/us/app/colorblind-style/id6797023300"
+            target="_blank"
+            class="appstore-link"
+          >
+            <img
+              src="assets/appstore-black.svg"
+              alt="Download on the App Store"
+              class="appstore-badge"
+              width="120"
+              height="40"
+            />
+          </a>
+          <p class="download-sub">
+            Free to download · iPhone and iPad · No account required
           </p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- SAVED MATCHES -->
-    <section class="feature-spotlight">
-      <div class="container feature-spotlight-inner">
-        <div class="feature-spotlight-text">
-          <h2>Save what works for you</h2>
+      <!-- STYLE VERDICTS -->
+      <section class="feature-spotlight">
+        <div class="container feature-spotlight-inner">
+          <div class="feature-spotlight-text">
+            <h2>Your outfit, analyzed.</h2>
+            <p>
+              Every color combination gets a full style verdict — Classic, Bold,
+              Harmonious, or Playful. See which occasions it works for, what
+              seasons it suits, and exactly how to wear it with confidence.
+            </p>
+          </div>
+          <div class="feature-spotlight-image">
+            <picture class="img-picture spotlight-screenshot">
+              <source
+                srcset="assets/screenshots/verdict1.webp"
+                type="image/webp"
+              />
+              <img
+                src="assets/screenshots/verdict1.jpg"
+                alt="Classic style verdict"
+                width="1242"
+                height="2688"
+              />
+            </picture>
+            <picture class="img-picture spotlight-screenshot">
+              <source
+                srcset="assets/screenshots/verdict2.webp"
+                type="image/webp"
+              />
+              <img
+                src="assets/screenshots/verdict2.jpg"
+                alt="Style details"
+                width="1179"
+                height="2556"
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <!-- CLASHING -->
+      <section class="feature-spotlight feature-spotlight-alt">
+        <div class="container feature-spotlight-inner">
+          <div class="feature-spotlight-image">
+            <picture class="img-picture spotlight-screenshot">
+              <source
+                srcset="assets/screenshots/clashing.webp"
+                type="image/webp"
+              />
+              <img
+                src="assets/screenshots/clashing.jpg"
+                alt="Clashing verdict screen"
+                width="1242"
+                height="2688"
+              />
+            </picture>
+          </div>
+          <div class="feature-spotlight-text">
+            <h2>Know what to avoid</h2>
+            <p>
+              When colors clash, Colorblind Style doesn't just tell you — it
+              shows you what would work better instead. Three alternative colors
+              that pair well with what you already have.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SAVED MATCHES -->
+      <section class="feature-spotlight">
+        <div class="container feature-spotlight-inner">
+          <div class="feature-spotlight-text">
+            <h2>Save what works for you</h2>
+            <p>
+              Build a personal library of outfit combinations. Every saved match
+              includes the color names, wardrobe roles, and style verdict so you
+              can recreate your best looks effortlessly.
+            </p>
+          </div>
+          <div class="feature-spotlight-image">
+            <picture class="img-picture spotlight-screenshot">
+              <source
+                srcset="assets/screenshots/saved-matches.webp"
+                type="image/webp"
+              />
+              <img
+                src="assets/screenshots/saved-matches.jpg"
+                alt="Saved Matches screen"
+                width="1242"
+                height="2688"
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <!-- UNDERTONE REVEAL -->
+      <section class="feature-spotlight feature-spotlight-alt">
+        <div class="container feature-spotlight-inner">
+          <div class="feature-spotlight-image">
+            <picture class="img-picture spotlight-screenshot">
+              <source
+                srcset="assets/screenshots/undertone1.webp"
+                type="image/webp"
+              />
+              <img
+                src="assets/screenshots/undertone1.jpg"
+                alt="Undertone reveal cool neutral"
+                width="1179"
+                height="2556"
+              />
+            </picture>
+            <picture class="img-picture spotlight-screenshot">
+              <source
+                srcset="assets/screenshots/undertone2.webp"
+                type="image/webp"
+              />
+              <img
+                src="assets/screenshots/undertone2.jpg"
+                alt="Undertone reveal warm neutral"
+                width="1179"
+                height="2556"
+              />
+            </picture>
+          </div>
+          <div class="feature-spotlight-text">
+            <h2>See beyond gray</h2>
+            <p>
+              When a color reads as gray, a corner fold reveals the hidden hue —
+              whether it's leaning warm toward orange or cool toward blue.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- DOWNLOAD -->
+      <section class="download download-alt" id="download-footer">
+        <div class="container">
+          <h2>Try it free</h2>
           <p>
-            Build a personal library of outfit combinations. Every saved match
-            includes the color names, wardrobe roles, and style verdict so you
-            can recreate your best looks effortlessly.
+            Three free color matches on us. Unlock unlimited matches and saves
+            forever with a single one-time purchase of $4.99.
+          </p>
+          <a
+            href="https://apps.apple.com/us/app/colorblind-style/id6797023300"
+            target="_blank"
+            class="appstore-link"
+          >
+            <img
+              src="assets/appstore-white.svg"
+              alt="Download on the App Store"
+              class="appstore-badge"
+              width="120"
+              height="40"
+            />
+          </a>
+          <p class="download-sub">
+            Free to download · iPhone and iPad · No account required
           </p>
         </div>
-        <div class="feature-spotlight-image">
-          <img
-            src="assets/screenshots/saved-matches.jpg"
-            alt="Saved Matches screen"
-            class="spotlight-screenshot"
-          />
-        </div>
-      </div>
-    </section>
-
-    <!-- UNDERTONE REVEAL -->
-    <section class="feature-spotlight feature-spotlight-alt">
-      <div class="container feature-spotlight-inner">
-        <div class="feature-spotlight-image">
-          <img
-            src="assets/screenshots/undertone1.jpg"
-            alt="Undertone reveal cool neutral"
-            class="spotlight-screenshot"
-          />
-          <img
-            src="assets/screenshots/undertone2.jpg"
-            alt="Undertone reveal warm neutral"
-            class="spotlight-screenshot"
-          />
-        </div>
-        <div class="feature-spotlight-text">
-          <h2>See beyond gray</h2>
-          <p>
-            When a color reads as gray, a corner fold reveals the hidden hue —
-            whether it's leaning warm toward orange or cool toward blue.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- DOWNLOAD -->
-    <section class="download download-alt" id="download-footer">
-      <div class="container">
-        <h2>Try it free</h2>
-        <p>
-          Three free color matches on us. Unlock unlimited matches and saves
-          forever with a single one-time purchase of $4.99.
-        </p>
-        <a
-          href="https://apps.apple.com/us/app/colorblind-style/id6797023300"
-          target="_blank"
-          class="appstore-link"
-        >
-          <img
-            src="assets/appstore-white.svg"
-            alt="Download on the App Store"
-            class="appstore-badge"
-          />
-        </a>
-        <p class="download-sub">
-          Free to download · iPhone and iPad · No account required
-        </p>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- FOOTER -->
     <footer>
